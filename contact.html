@@ -53,15 +53,7 @@
     </var>
 
     <section class="body-container">
-        <div class="bc-menu">
-            <h3>หมวดหมู่สินค้า</h3>
-            <ul>
-                <li><a href="#">บัตรเติมเงิน/บัตรเติมเกม</a></li>
-                <li><a href="#">คีย์เกม/ไอเทมในเกม</a></li>
-                <li><a href="#">ไอดีเกม มือถือ/PC</a></li>
-                <li><a href="#">โปรแกรม</a></li>
-            </ul>
-        </div>
+
 
         <div class="container">
             <div class="contact-box">
@@ -72,7 +64,15 @@
                     <input type="text" class="field" placeholder="Your Email">
                     <input type="text" class="field" placeholder="Phone">
                     <textarea placeholder="Message" class="field"></textarea>
-                    <button class="btn">Send</button>
+                    <button class="btn" onclick="openPopup()">Send</button>
+                    <div class="popup" id="popup">
+                        <img src="img/tick.png">
+                        <h2>Thank You!</h2>
+                        <p>Your details has been successfully submitted. Thanks!</p>
+                        <a href="contact.html">
+                        <button type="button" onclick="closePopup()">OK</button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,6 +103,17 @@
     </footer>
 
     <a class="btn-top" href="#"> <i class="fa-solid fa-arrow-up"></i> </a>
+    <script>
+        let popup = document.getElementById("popup");
+
+        function openPopup(){
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+        }
+
+    </script>
 </body>
 
 </html>
